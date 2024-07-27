@@ -59,20 +59,6 @@ public class Client : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        //Checking if released mouse
-        if (Input.GetMouseButtonUp(0))
-        {
-            //Checking if it's a food
-            if (collision.CompareTag("Food"))
-            {
-                //Getting food
-                GetFood(collision.GetComponent<Food>().ingredients);
-                //Destroying food
-                Destroy(collision.gameObject);
-            }
-        }
-    }
+    
 
 }

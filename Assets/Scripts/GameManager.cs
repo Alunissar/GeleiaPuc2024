@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -30,10 +31,12 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField] TextMeshProUGUI currencyText;
 
+    public Action<DayState> changeDayState;
+
     private void Start()
     {
-        StartGame();
-        StartDay();
+        //StartGame();
+        //StartDay();
     }
 
     public void StartGame()
@@ -51,16 +54,16 @@ public class GameManager : Singleton<GameManager>
             GetCurrency();
         }
         //Getting a random chance for getting ingredient
-        float _chance = Random.Range(0f, 100f);
+        float _chance = UnityEngine.Random.Range(0f, 100f);
         //Checking chance
         if(_chance <= ingredientGainChance)
         {
             //Getting an random index
-            int ind = Random.Range(0, ingredients.Count);
+            int ind = UnityEngine.Random.Range(0, ingredients.Count);
             //Getting the ingredient
             IngredientScriptable ing = ingredients[ind];
             //Getting a random number of ingredients to get
-            int quantity = Random.Range(minIngredientGain, maxIngredientGain + 1);
+            int quantity = UnityEngine.Random.Range(minIngredientGain, maxIngredientGain + 1);
 
             GetIngredients(ing, quantity);
         }
@@ -69,7 +72,7 @@ public class GameManager : Singleton<GameManager>
     private void GetCurrency()
     {
         //Adding a random quantity of currency
-        currency += Random.Range(minCurrencyGain, maxCurrencyGain+1);
+        currency += UnityEngine.Random.Range(minCurrencyGain, maxCurrencyGain+1);
 
         UpdateCurrencyText();
 
