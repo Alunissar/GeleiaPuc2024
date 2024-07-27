@@ -88,7 +88,6 @@ public class Food : MonoBehaviour
 
     private void OnMouseOver()
     {
-        Debug.Log("Mouse over");
 
         //Checking if cliked ontop of food
         if(Input.GetMouseButtonDown(0))

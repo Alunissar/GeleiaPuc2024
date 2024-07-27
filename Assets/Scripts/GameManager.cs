@@ -18,6 +18,8 @@ public class GameManager : Singleton<GameManager>
     public int dayCount;
     public int currency;
 
+    [SerializeField] InventoryShop inventoryShop;
+
     public List<IngredientScriptable> ingredients = new List<IngredientScriptable>();
 
     [SerializeField] int minCurrencyGain;
@@ -86,6 +88,8 @@ public class GameManager : Singleton<GameManager>
         ing.quantity += quantity;
 
         Inventory.Instance.UpdateTexts();
+
+        inventoryShop.UpdateText();
 
         UpdateCurrencyText();
     }

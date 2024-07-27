@@ -57,6 +57,10 @@ public class ClientManager : Singleton<ClientManager>
         { 
             Destroy(characterSpawnPoint.GetChild(0).gameObject);
             deliveryScreen.SwapScreen(2);
+
+            //Passing a day
+            GameManager.Instance.StartDay();
+
             return;
         }
 
