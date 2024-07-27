@@ -176,6 +176,7 @@ MonoBehaviour:
   recipe: []
   slots: 
   maxIngredients: 3
+  minIngredients: 2
   foodPrefab: {fileID: 6113910050000133096, guid: 97eb49f371fcffb489f3af87b131f93a,
     type: 3}
   foodList: {fileID: 0}

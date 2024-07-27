@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : Singleton<Inventory>
 {
 
-    [SerializeField] List<IngredientScriptable> allIngredients = new List<IngredientScriptable>();
+    List<IngredientScriptable> allIngredients = new List<IngredientScriptable>();
     List<InventorySlot> slotList = new List<InventorySlot>();
 
     [SerializeField] GameObject slotPrefab;
@@ -14,6 +14,8 @@ public class Inventory : Singleton<Inventory>
     // Start is called before the first frame update
     void Start()
     {
+        allIngredients = GameManager.Instance.ingredients;
+
         InitializeInventory();
         OrganizeInventory();
     }
@@ -91,6 +93,22 @@ public class Inventory : Singleton<Inventory>
         if (allIngredients[slot].quantity > 0)
         {
             slotList[slot].gameObject.SetActive(true);
+        }
+    }
+
+    public void UpdateTexts()
+    {
+
+
+        for (int i = 0; i < slotList.Count; i++)
+        {
+            slotList[i].UpdateText();
+
+            //Checking quantity
+            if (allIngredients[i].quantity > 0)
+            {
+                slotList[i].gameObject.SetActive(true);
+            }
         }
     }
 

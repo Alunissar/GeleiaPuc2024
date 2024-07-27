@@ -10,4 +10,7 @@ public class IngredientScriptable : ScriptableObject
     public string[] tags;
     public Sprite icon; 
     public int quantity;
+    public int price;
+    //Number of days to get bad
+    public int durability;
 }
