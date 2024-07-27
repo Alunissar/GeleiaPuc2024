@@ -284,8 +284,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e36d4fa02c204542ac1969abc293090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DialogueText: {fileID: 1639326068}
-  DialogueBox: {fileID: 220990399}
+  dialogueText: {fileID: 1639326068}
+  dialogueBox: {fileID: 1122691332}
   testChar: {fileID: 11400000, guid: 7c3f474653de2bf4a956058a404c0816, type: 2}
 --- !u!1 &412836311
 GameObject:
