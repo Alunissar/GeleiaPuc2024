@@ -9,7 +9,7 @@ public class InventorySlot : MonoBehaviour
     public IngredientScriptable ingredient;
     [SerializeField] TextMeshProUGUI quantityText;
 
-    private void Start()
+    virtual protected void Start()
     {
         UpdateText();
     }

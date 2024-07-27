@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ShopSlot : MonoBehaviour
+public class ShopSlot : InventorySlot
 {
-    public IngredientScriptable ingredient;
     [SerializeField] TextMeshProUGUI priceText;
 
     // Start is called before the first frame update
-    void Start()
+    override protected void Start()
     {
         //Updating ingredient price text
         priceText.text = ingredient.price.ToString();
