@@ -1,21 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class InventorySlot : MonoBehaviour
 {
 
     public IngredientScriptable ingredient;
+    [SerializeField] TextMeshProUGUI quantityText;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        UpdateText();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Clicked()
     {
-        
+        //Getting ingredient based on index
+        Inventory.Instance.GetIngredient(transform.GetSiblingIndex());
+    }
+
+    public void UpdateText()
+    {
+        //Changing the quantity text
+        quantityText.text = ingredient.quantity.ToString();
     }
 }
