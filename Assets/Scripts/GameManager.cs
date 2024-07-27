@@ -35,7 +35,7 @@ public class GameManager : Singleton<GameManager>
     public void StartDay()
     {
         dayCount++;
-        //ClientManager.Instance.PopulateQueue(5);
+        ClientManager.Instance.PopulateQueue(5);
         //Checking if it's the start of the week
         if (dayCount % 7 == 0)
         {
