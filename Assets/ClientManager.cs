@@ -7,7 +7,7 @@ public class ClientManager : Singleton<ClientManager>
 {
     public CharacterSO[] allCharacters;
     
-    private List<CharacterSO> characterQueue;
+    private List<CharacterSO> characterQueue = new List<CharacterSO>();
 
     private CharacterSO activeCharacter;
 
@@ -26,16 +26,22 @@ public class ClientManager : Singleton<ClientManager>
             unQueuedChars.RemoveAt(random);
         }
         
-
+        RenderCharacter(characterQueue[0]);
+        characterQueue.RemoveAt(0);
     }
 
     private void RenderCharacter(CharacterSO character)
     {
         activeCharacter = character;
         
-        if(characterSpawnPoint.GetChild(0) == null)
-        {
-            Instantiate(activeCharacter, characterSpawnPoint);
-        }
+        try{Destroy(characterSpawnPoint.GetChild(0));}
+        catch{}
+        Instantiate(activeCharacter.graphicsPrefab, characterSpawnPoint);
+    }
+
+    private void NextCharacter()
+    {
+        RenderCharacter(characterQueue[0]);
+        characterQueue.RemoveAt(0);
     }
 }
