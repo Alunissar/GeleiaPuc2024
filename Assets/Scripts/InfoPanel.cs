@@ -7,7 +7,7 @@ public class InfoPanel : MonoBehaviour
 {
 
     string ingredientName;
-    string[] ingredientTags;
+    FoodType[] ingredientTags;
 
     [SerializeField] TextMeshProUGUI nameText;
     [SerializeField] TextMeshProUGUI tagsText;
@@ -67,8 +67,8 @@ public class InfoPanel : MonoBehaviour
         nameText.text = ingredientName;
 
         string _text = "";
-        //Going through all tags
-        for(int i = 0; i < ingredientTags.Length; i++)
+        //Going through all tags expect the first one
+        for(int i = 1; i < ingredientTags.Length; i++)
         {
             //Adding ingredient to the text
             _text += ingredientTags[i] + "\n";

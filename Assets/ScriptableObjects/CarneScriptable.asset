@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: CarneScriptable
   m_EditorClassIdentifier: 
   ingredientName: Carne
-  tags:
-  - Proteina
+  tags: 0800000000000000
   icon: {fileID: 21300000, guid: 9d9f1e365821d0840b55ae54ea4040a0, type: 3}
   quantity: 6
   price: 0

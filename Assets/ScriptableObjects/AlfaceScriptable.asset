@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: AlfaceScriptable
   m_EditorClassIdentifier: 
   ingredientName: Alface
-  tags:
-  - Verdura
+  tags: 0500000004000000
   icon: {fileID: 0}
   quantity: 6
   price: 0

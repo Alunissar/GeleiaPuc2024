@@ -3,11 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum FoodType
+{
+    Proteina,
+    Legume,
+    Grao,
+    Fruta,
+    Verdura,
+    Alface,
+    Arroz,
+    Batata,
+    Carne,
+    Cenoura,
+    Couve,
+    Feijao,
+    Laranja,
+    Mandioca,
+    Ovo,
+    Soja,
+    Tomate
+}
+
 [CreateAssetMenu(fileName = "Ingredient", menuName = "Ingredients", order = 1)]
 public class IngredientScriptable : ScriptableObject
 {
     public string ingredientName;
-    public string[] tags;
+    public FoodType[] tags;
     public Sprite icon; 
     public int quantity;
     public int price;

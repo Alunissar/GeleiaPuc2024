@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: MandiocaScriptable
   m_EditorClassIdentifier: 
   ingredientName: Mandioca
-  tags:
-  - Legume
+  tags: 0d00000001000000
   icon: {fileID: 0}
   quantity: 5
   price: 0

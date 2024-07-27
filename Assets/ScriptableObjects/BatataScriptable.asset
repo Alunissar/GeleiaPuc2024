@@ -13,10 +13,8 @@ MonoBehaviour:
   m_Name: BatataScriptable
   m_EditorClassIdentifier: 
   ingredientName: Batata
-  tags:
-  - Legume
-  - Ruim
+  tags: 0700000001000000
   icon: {fileID: 0}
-  quantity: 2
+  quantity: 6
   price: 0
   durability: 0

@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: OvoScriptable
   m_EditorClassIdentifier: 
   ingredientName: Ovo
-  tags:
-  - Proteina
+  tags: 0e00000000000000
   icon: {fileID: 0}
   quantity: 17
   price: 0

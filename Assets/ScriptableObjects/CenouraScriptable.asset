@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: CenouraScriptable
   m_EditorClassIdentifier: 
   ingredientName: Cenoura
-  tags:
-  - Legume
+  tags: 0900000001000000
   icon: {fileID: 0}
   quantity: 1
   price: 0

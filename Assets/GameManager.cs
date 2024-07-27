@@ -5,6 +5,15 @@ using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
+    public enum DayState
+    {
+        Shop,
+        Kitchen,
+        Deliver
+    }
+
+    public DayState currentDayState;
+
     public int dayCount;
     public int currency;
 
