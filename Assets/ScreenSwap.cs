@@ -17,12 +17,14 @@ public class ScreenSwap : MonoBehaviour
 
         foreach(ScreenSwap screenObject in screenObjects)
         {
-            if(screenObject.type == type)
-            {
+            if(screenObject.type == i)
+            {   
                 transform.position = Vector3.right * 50;
                 UICanvas.SetActive(false);
                 screenObject.transform.position = Vector3.zero;
                 screenObject.UICanvas.SetActive(true);
+                GameManager.Instance.currentDayState = (GameManager.DayState)i;
+                GameManager.Instance.changeDayState((GameManager.DayState)i);
                 return;
             }
         }

@@ -8,9 +8,9 @@ public class GameManager : Singleton<GameManager>
 {
     public enum DayState
     {
-        Shop,
+        Deliver,
         Kitchen,
-        Deliver
+        Shop,
     }
 
     public DayState currentDayState;

@@ -180,7 +180,8 @@ MonoBehaviour:
   minIngredients: 2
   foodPrefab: {fileID: 6113910050000133096, guid: 97eb49f371fcffb489f3af87b131f93a,
     type: 3}
-  foodList: {fileID: 0}
+  foodList: {fileID: 8609234466814586593, guid: 850d48857c736364f8fe984c77f08ca2,
+    type: 3}
   maxFood: 12
 --- !u!114 &2570380587693115000
 MonoBehaviour:

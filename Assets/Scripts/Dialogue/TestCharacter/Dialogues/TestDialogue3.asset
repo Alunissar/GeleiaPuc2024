@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05a15b1009faf1045a32595ba1ddfb54, type: 3}
-  m_Name: TestDialogue1
+  m_Name: TestDialogue3
   m_EditorClassIdentifier: 
-  prompt: 5
+  prompt: 7
   texts:
-  - First Dialogue
+  - Third dialogue

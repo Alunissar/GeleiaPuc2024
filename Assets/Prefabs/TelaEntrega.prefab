@@ -674,7 +674,6 @@ MonoBehaviour:
   dialogueText: {fileID: 9140515301515413612}
   nameText: {fileID: 841755176982140649}
   dialogueBox: {fileID: 8360143952909746339}
-  testChar: {fileID: 11400000, guid: 7c3f474653de2bf4a956058a404c0816, type: 2}
 --- !u!1 &4839269019632703479
 GameObject:
   m_ObjectHideFlags: 0

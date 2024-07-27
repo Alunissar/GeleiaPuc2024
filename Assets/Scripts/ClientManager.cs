@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ClientManager : Singleton<ClientManager>
@@ -12,6 +13,8 @@ public class ClientManager : Singleton<ClientManager>
     private CharacterSO activeCharacter;
 
     public Transform characterSpawnPoint;
+
+    public ScreenSwap deliveryScreen;
 
     //Creates new queue of characters
     public void PopulateQueue(int characterCount)
@@ -52,7 +55,8 @@ public class ClientManager : Singleton<ClientManager>
         //clear graphics
         if(characterQueue.Count == 0) 
         { 
-            Destroy(characterSpawnPoint.GetChild(0));
+            Destroy(characterSpawnPoint.GetChild(0).gameObject);
+            deliveryScreen.SwapScreen(2);
             return;
         }
 

@@ -17,5 +17,6 @@ MonoBehaviour:
     type: 3}
   dialogues:
   - {fileID: 11400000, guid: df7917f123ebb864397fe9beec62695f, type: 2}
-  _hasMet: 0
+  - {fileID: 11400000, guid: 764988090e0945c4f9cf31410b62c3e3, type: 2}
+  _hasMet: 1
   meetingTimes: 0

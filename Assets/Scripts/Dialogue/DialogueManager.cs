@@ -58,7 +58,8 @@ public class DialogueManager : Singleton<DialogueManager>
             }
 
             
-            
+            currentDialogue = null;
+            dialogueBox.SetActive(false);
             return;
         }
 
