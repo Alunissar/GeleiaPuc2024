@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
@@ -17,6 +18,8 @@ public class GameManager : Singleton<GameManager>
 
     [Range(0, 100)]
     [SerializeField] float ingredientGainChance;
+
+    [SerializeField] TextMeshProUGUI currencyText;
 
     private void Start()
     {
@@ -43,7 +46,14 @@ public class GameManager : Singleton<GameManager>
         //Checking chance
         if(_chance <= ingredientGainChance)
         {
-            GetIngredients();
+            //Getting an random index
+            int ind = Random.Range(0, ingredients.Count);
+            //Getting the ingredient
+            IngredientScriptable ing = ingredients[ind];
+            //Getting a random number of ingredients to get
+            int quantity = Random.Range(minIngredientGain, maxIngredientGain + 1);
+
+            GetIngredients(ing, quantity);
         }
     }
 
@@ -51,18 +61,30 @@ public class GameManager : Singleton<GameManager>
     {
         //Adding a random quantity of currency
         currency += Random.Range(minCurrencyGain, maxCurrencyGain+1);
+
+        UpdateCurrencyText();
+
     }
 
-    private void GetIngredients()
+    public void GetIngredients(IngredientScriptable ing, int quantity)
     {
-        //Getting an random index
-        int ind = Random.Range(0, ingredients.Count);
-        //Getting a random number of ingredients to get
-        int quantity = Random.Range(minIngredientGain,maxIngredientGain+1);
+
         //Adding ingredients
-        ingredients[ind].quantity += quantity;
+        ing.quantity += quantity;
 
         Inventory.Instance.UpdateTexts();
+
+        UpdateCurrencyText();
+    }
+
+    private void UpdateCurrencyText()
+    {
+        //Checking if there is a text reference
+        if (currencyText != null)
+        {
+            //Updating currency text
+            currencyText.text = "$" + currency;
+        }
     }
 
 }

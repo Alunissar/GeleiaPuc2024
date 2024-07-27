@@ -15,4 +15,6 @@ MonoBehaviour:
   ingredientName: Alface
   tags: []
   icon: {fileID: 0}
-  quantity: 3
+  quantity: 4
+  price: 0
+  durability: 0

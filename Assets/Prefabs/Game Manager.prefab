@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8336908101031474064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4778800672269052114}
+  - component: {fileID: 866775180920211276}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4778800672269052114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336908101031474064}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1327726, y: 1.310858, z: -0.01654361}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &866775180920211276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336908101031474064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f0ea606e5b3bc4696dbbcffc290ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dayCount: 0
+  currency: 0
+  ingredients:
+  - {fileID: 11400000, guid: f5c4b3f3733b60442a978159172718bf, type: 2}
+  - {fileID: 11400000, guid: 6827111d64eb2684ea551fc3e16b44cf, type: 2}
+  - {fileID: 11400000, guid: a241235d64580dc4a8d0b43d8a692b01, type: 2}
+  - {fileID: 11400000, guid: 740572bfdc9c4cb4eb045a2b89cd670d, type: 2}
+  - {fileID: 11400000, guid: 379cdf3ff754fd041bf7037944d377ff, type: 2}
+  - {fileID: 11400000, guid: 6cd4d3ee196f066438e31b54f2d8cbd8, type: 2}
+  - {fileID: 11400000, guid: cc133f147980af046aa81b3763f5d9dd, type: 2}
+  - {fileID: 11400000, guid: 09ce774eb4719224484cacb9e24a3225, type: 2}
+  - {fileID: 11400000, guid: 7534a772407ddef4f99ee68eddc9eb7f, type: 2}
+  - {fileID: 11400000, guid: 1c07a18aacce24d4f8120c58c4471bda, type: 2}
+  - {fileID: 11400000, guid: 224a9942ad8e8a54e95a84cf96ab7bec, type: 2}
+  - {fileID: 11400000, guid: 2f4206cb60fb3ca40b942152a9f85b98, type: 2}
+  minCurrencyGain: 180
+  maxCurrencyGain: 350
+  minIngredientGain: 2
+  maxIngredientGain: 6
+  ingredientGainChance: 50
