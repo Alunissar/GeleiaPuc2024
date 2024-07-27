@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Food : MonoBehaviour
@@ -13,6 +14,8 @@ public class Food : MonoBehaviour
     bool isFollowing = false;
 
     bool canHold = true;
+
+    bool ontop = false;
 
     Vector3 lastPosition;
 
@@ -34,20 +37,57 @@ public class Food : MonoBehaviour
             //Checking if mouse was released
             if (Input.GetMouseButtonUp(0))
             {
-                holding = false;
-                isFollowing = false;
+                if (!ontop)
+                {
+                
+                    holding = false;
+                    isFollowing = false;
 
-                //Returning to last position
-                transform.position = lastPosition;
+                    //Returning to last position
+                    transform.position = lastPosition;
 
+                }
             }
 
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+        //Checking if it's a food
+        if (collision.CompareTag("Client"))
+        {
+             ontop = true;
+            //Checking if released mouse
+            if (!Input.GetMouseButton(0) && isFollowing)
+            {
+                //Passing ingredients
+                collision.GetComponent<Client>().GetFood(ingredients);
+
+                holding = false;
+
+                //Destroying food
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        ontop = false;
+    }
+
+    private void OnDestroy()
+    {
+        if (holding)
+        {
+            holding = false;
+        }
+    }
+
     private void OnMouseOver()
     {
-        Debug.Log("a");
 
         //Checking if cliked ontop of food
         if(Input.GetMouseButtonDown(0))

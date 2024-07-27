@@ -5,23 +5,42 @@ using UnityEngine;
 public class FoodShelf : MonoBehaviour
 {
 
-    [SerializeField] int rows;
-    [SerializeField] int cols;
+    int rows;
+    int cols;
 
-    [SerializeField] float gapX;
-    [SerializeField] float gapY;
+    float gapX;
+    float gapY;
+
+    [Header("Cooking State")]
+    [SerializeField] int rowsC;
+    [SerializeField] int colsC;
+
+    [SerializeField] float gapXC;
+    [SerializeField] float gapYC;
+
+    [SerializeField] Vector3 posC;
+
+    [Header("Deliver State")]
+    [SerializeField] int rowsD;
+    [SerializeField] int colsD;
+
+    [SerializeField] float gapXD;
+    [SerializeField] float gapYD;
+
+    [SerializeField] Vector3 posD;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.Instance.changeDayState += ChangeState;
+
+        //Initializing
+        ChangeState(GameManager.Instance.currentDayState);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //DEBUUUUUUUUUUUG PLMDS
-        Organize();
     }
 
     public void Organize()
@@ -50,6 +69,36 @@ public class FoodShelf : MonoBehaviour
             }
             
         }
+    }
+
+    private void ChangeState(GameManager.DayState state)
+    {
+        switch(state)
+        {
+            case GameManager.DayState.Deliver:
+                rows = rowsD;
+                cols = colsD;
+
+                gapX = gapXD;
+                gapY = gapYD;
+
+                transform.position = posD;
+
+                break;
+
+            case GameManager.DayState.Kitchen:
+                rows = rowsC;
+                cols = colsC;
+
+                gapX = gapXC;
+                gapY = gapYC;
+
+                transform.position = posC;
+                break;
+        }
+
+        Organize();
+
     }
 
 }
