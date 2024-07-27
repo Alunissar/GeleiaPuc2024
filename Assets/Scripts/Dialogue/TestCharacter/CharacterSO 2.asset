@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96805931fc031d24fa104040a8259001, type: 3}
-  m_Name: TestCharacter
+  m_Name: CharacterSO 2
   m_EditorClassIdentifier: 
-  charName: Test
-  clientPrefab: {fileID: 2021978998274599360, guid: 1f38f3037b7ddc04ea40ed1e8f8dae62,
+  charName: Char2
+  clientPrefab: {fileID: -2225808398858467014, guid: 18701d97638b0ae4d90594a42d852ceb,
     type: 3}
-  dialogues:
-  - {fileID: 11400000, guid: df7917f123ebb864397fe9beec62695f, type: 2}
+  dialogues: []
+  _hasMet: 0
+  meetingTimes: 0

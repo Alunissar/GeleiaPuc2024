@@ -93,9 +93,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3802948736023825789}
+  - component: {fileID: 5775518032436142173}
   m_Layer: 0
   m_Name: Character3
-  m_TagString: Untagged
+  m_TagString: Client
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,6 +120,20 @@ Transform:
   - {fileID: 656502228286038763}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5775518032436142173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2164514369437368016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8e27048cd434fe439f7b307a4283d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  likes: 
+  dislikes: 
 --- !u!1 &2845452557830524532
 GameObject:
   m_ObjectHideFlags: 0

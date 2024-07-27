@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Client : MonoBehaviour
 {
-
     public List<FoodType> likes;
     public List<FoodType> dislikes;
 
@@ -28,6 +27,9 @@ public class Client : MonoBehaviour
 
     public void GetFood(List<IngredientScriptable> ingredients)
     {
+        //reset taste
+        taste = 0;
+
         //Running through all ingredients
         for (int i = 0; i < ingredients.Count; i++)
         {
@@ -57,6 +59,8 @@ public class Client : MonoBehaviour
                 }
             }
         }
+        //Triggers dialogue according to taste
+        ClientManager.Instance.DeliveryDialogue(taste);
     }
 
     

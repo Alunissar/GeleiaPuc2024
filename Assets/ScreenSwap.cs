@@ -5,15 +5,19 @@ using UnityEngine;
 
 public class ScreenSwap : MonoBehaviour
 {
-    public bool _type;  //true and false for different screens
+    //screen type (bc buttons don't pass enums)
+    //0 = deliver
+    //1 = kitchen
+    //2 = shop
+    public int type;
     public GameObject UICanvas;
-    public void SwapScreen()
+    public void SwapScreen(int i)
     {
         ScreenSwap[] screenObjects = FindObjectsByType<ScreenSwap>(FindObjectsInactive.Include, FindObjectsSortMode.None);
 
         foreach(ScreenSwap screenObject in screenObjects)
         {
-            if(screenObject._type != _type)
+            if(screenObject.type == type)
             {
                 transform.position = Vector3.right * 50;
                 UICanvas.SetActive(false);
@@ -22,6 +26,6 @@ public class ScreenSwap : MonoBehaviour
                 return;
             }
         }
-        Debug.LogWarning($"No screen with different type found in scene, cannot swap.");
+        Debug.LogWarning($"No screen with type {type} found in scene, cannot swap.");
     }
 }

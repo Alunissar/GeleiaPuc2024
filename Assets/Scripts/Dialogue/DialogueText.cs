@@ -10,7 +10,6 @@ public class DialogueText : MonoBehaviour
     void Awake()
     {
         textBox = GetComponent<TMP_Text>();
-        WriteText("Ola eu sou uma string uau string que legal como as letras...\nletram...\neh.");
     }
 
     public void WriteText(string text)
@@ -21,6 +20,7 @@ public class DialogueText : MonoBehaviour
 
     private IEnumerator ResizeFix()
     {
+        yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
         textBox.text = textBox.text + " ";
     }
