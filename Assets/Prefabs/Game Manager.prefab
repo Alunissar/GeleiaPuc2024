@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f0ea606e5b3bc4696dbbcffc290ccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentDayState: 0
   dayCount: 0
   currency: 0
   ingredients:
@@ -64,3 +65,4 @@ MonoBehaviour:
   minIngredientGain: 2
   maxIngredientGain: 6
   ingredientGainChance: 50
+  currencyText: {fileID: 0}

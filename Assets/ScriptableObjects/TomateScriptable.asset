@@ -15,6 +15,6 @@ MonoBehaviour:
   ingredientName: Tomate
   tags: 1000000003000000
   icon: {fileID: 21300000, guid: cbd32fef1902ed440a7dd12cf086f86a, type: 3}
-  quantity: 0
+  quantity: 4
   price: 0
   durability: 0

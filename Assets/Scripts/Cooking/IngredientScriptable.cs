@@ -15,7 +15,7 @@ public enum FoodType
     Batata,
     Carne,
     Cenoura,
-    Couve,
+    Brocolis,
     Feijao,
     Laranja,
     Mandioca,

@@ -41,6 +41,7 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
+        GameObject.FindFirstObjectByType<ScreenSwap>().SwapScreen((int)currentDayState);
         dayCount = 0;
         currency = 250;
     }

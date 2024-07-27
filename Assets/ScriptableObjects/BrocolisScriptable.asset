@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de3eaa441250ab14a91d343d42083d9a, type: 3}
-  m_Name: CouveScriptable
+  m_Name: BrocolisScriptable
   m_EditorClassIdentifier: 
-  ingredientName: Couve
+  ingredientName: Brocolis
   tags: 0a00000004000000
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 3077175f66f43bf4a8d66b2f2ffc1855, type: 3}
   quantity: 0
   price: 0
   durability: 0
