@@ -30,8 +30,19 @@ public class Ingredient : MonoBehaviour
             //Checking if ingredient is in pan
             if(inPan)
             {
-                //Adding ingredient to the pan
-                pan.GetComponent<CookingHandler>().AddIngredient(ingredient);
+                //Getting reference to cooking handler
+                CookingHandler _pan = pan.GetComponent<CookingHandler>();
+                //Checking if there is space in the pan
+                if (_pan.recipe.Count < _pan.maxIngredients)
+                {
+                    //Adding ingredient to the pan
+                    _pan.AddIngredient(ingredient, slot);
+                }
+                else
+                {
+                    //Returning ingredient to Inventory
+                    Inventory.Instance.ReturnIngredient(slot);
+                }
             }
             else
             {

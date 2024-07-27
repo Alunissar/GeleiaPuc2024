@@ -6,48 +6,64 @@ public class CookingHandler : MonoBehaviour
 {
 
     public List<IngredientScriptable> recipe = new List<IngredientScriptable>();
+    public List<int> slots = new List<int>();
 
-    [SerializeField] int maxIngredients;
+    public int maxIngredients;
+    public int minIngredients;
     [SerializeField] GameObject foodPrefab;
+    [SerializeField] GameObject foodList;
+
+    PanShow panShow;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        panShow = GetComponent<PanShow>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void AddIngredient(IngredientScriptable newIngredient)
+    public void AddIngredient(IngredientScriptable newIngredient, int slot)
     {
         //Adding ingredient to recipe
         recipe.Add(newIngredient);
+        slots.Add(slot);
+        panShow.ShowIngredients();
+    }
 
-        //Checking if number of ingredients reached max
-        if(recipe.Count >= maxIngredients)
+    public void FinishRecipe()
+    {
+        //Checking if minimal ingredients are reached
+        if (recipe.Count >= minIngredients)
         {
-            FinishRecipe();
+            //Creating the food and getting component
+            Food _food = Instantiate(foodPrefab, foodList.transform).GetComponent<Food>();
+
+            //Going through all ingredients
+            for (int i = 0; i < recipe.Count; i++)
+            {
+                //Sending recipe to the food
+                _food.ingredients.Add(recipe[i]);
+            }
+
+            //Clearing recipe
+            recipe.Clear();
+            slots.Clear();
+            panShow.HideIngredients();
         }
     }
 
-    private void FinishRecipe()
+    public void ClearRecipe()
     {
-        //Creating the food and getting component
-        Food _food = Instantiate(foodPrefab, new Vector3(-1f, 0.3f, 0f), Quaternion.identity).GetComponent<Food>();
-        
         //Going through all ingredients
-        for (int i = 0; i < recipe.Count; i++)
+        for (int i = 0;i < recipe.Count;i++)
         {
-            //Sending recipe to the food
-            _food.ingredients.Add(recipe[i]);
+            //Returning ingredients to the inventory
+            Inventory.Instance.ReturnIngredient(slots[i]);
         }
 
         //Clearing recipe
         recipe.Clear();
+        slots.Clear();
+        panShow.HideIngredients();
     }
 
 }
