@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: TomateScriptable
   m_EditorClassIdentifier: 
   ingredientName: Tomate
-  tags: []
+  tags:
+  - Fruta
   icon: {fileID: 0}
   quantity: 0
+  price: 0
+  durability: 0

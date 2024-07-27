@@ -303,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredient: {fileID: 0}
   quantityText: {fileID: 6893794747876587450}
+  icon: {fileID: 4875840031021918526}
 --- !u!114 &5409027642239125501
 MonoBehaviour:
   m_ObjectHideFlags: 0

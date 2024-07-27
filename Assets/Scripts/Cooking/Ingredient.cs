@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ingredient : MonoBehaviour
 {
@@ -12,10 +13,13 @@ public class Ingredient : MonoBehaviour
 
     private bool inPan = false;
 
+    [SerializeField] SpriteRenderer icon;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Updating sprite
+        icon.sprite = ingredient.icon;
     }
 
     // Update is called once per frame

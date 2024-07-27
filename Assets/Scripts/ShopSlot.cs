@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopSlot : InventorySlot
 {
@@ -10,6 +11,8 @@ public class ShopSlot : InventorySlot
     // Start is called before the first frame update
     override protected void Start()
     {
+        icon.sprite = ingredient.icon;
+
         //Updating ingredient price text
         priceText.text = ingredient.price.ToString();
     }

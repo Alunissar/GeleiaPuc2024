@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: ArrozScriptable
   m_EditorClassIdentifier: 
   ingredientName: Arroz
-  tags: []
-  icon: {fileID: 0}
-  quantity: 3
+  tags:
+  - Grao
+  icon: {fileID: 21300000, guid: a8c2375fd2278d64798a9fcf31dc2af8, type: 3}
+  quantity: 18
+  price: 0
+  durability: 0

@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: CouveScriptable
   m_EditorClassIdentifier: 
   ingredientName: Couve
-  tags: []
+  tags:
+  - Verdura
   icon: {fileID: 0}
   quantity: 0
+  price: 0
+  durability: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour
 {
@@ -9,8 +10,12 @@ public class InventorySlot : MonoBehaviour
     public IngredientScriptable ingredient;
     [SerializeField] TextMeshProUGUI quantityText;
 
+    [SerializeField] protected Image icon;
+
     virtual protected void Start()
     {
+        icon.sprite = ingredient.icon;
+
         UpdateText();
     }
 
