@@ -277,11 +277,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allCharacters:
   - {fileID: 11400000, guid: 693ab651486b91a4f87be914c4e85721, type: 2}
-  - {fileID: 11400000, guid: 49019c1ca94080f4aa9a7960ec133003, type: 2}
-  - {fileID: 11400000, guid: 27580d6b6c73d214394788b5612ecba8, type: 2}
-  - {fileID: 11400000, guid: 8a7d7a67b29a5574d97e588b5e28afd4, type: 2}
-  - {fileID: 11400000, guid: 947a8f92d621f4742bdc0ce48bba9288, type: 2}
-  - {fileID: 11400000, guid: e332f87e2ecb68140a7f306da8fbb322, type: 2}
   characterSpawnPoint: {fileID: 384847230}
 --- !u!4 &481860183
 Transform:
@@ -518,6 +513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020542099897366249, guid: d419b4e5171286742bd992f979d049c9,
+        type: 3}
+      propertyPath: m_Name
+      value: CanvasEntrega
       objectReference: {fileID: 0}
     - target: {fileID: 3607173437189011541, guid: d419b4e5171286742bd992f979d049c9,
         type: 3}
@@ -805,8 +805,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8603765720090802622, guid: a85736d0c0a93ab44b3e034644a9b254,
         type: 3}
+      propertyPath: m_Name
+      value: CanvasCozinha
+      objectReference: {fileID: 0}
+    - target: {fileID: 8603765720090802622, guid: a85736d0c0a93ab44b3e034644a9b254,
+        type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
