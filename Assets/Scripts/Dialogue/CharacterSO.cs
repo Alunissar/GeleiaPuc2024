@@ -11,7 +11,7 @@ public class CharacterSO : ScriptableObject
     public bool _hasMet;
     public int meetingTimes;
 
-    private void Start() {
+    private void Awake() {
         _hasMet = false;
         meetingTimes = 0;
     }
