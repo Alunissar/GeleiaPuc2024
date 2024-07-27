@@ -13,12 +13,17 @@ public class CookingHandler : MonoBehaviour
     [SerializeField] GameObject foodPrefab;
     [SerializeField] GameObject foodList;
 
+    [SerializeField] int maxFood;
+
     PanShow panShow;
+
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         panShow = GetComponent<PanShow>();
+        animator = GetComponent<Animator>();
     }
 
     public void AddIngredient(IngredientScriptable newIngredient, int slot)
@@ -31,24 +36,30 @@ public class CookingHandler : MonoBehaviour
 
     public void FinishRecipe()
     {
-        //Checking if minimal ingredients are reached
-        if (recipe.Count >= minIngredients)
+        //Checking if minimal ingredients are reached && there is space to store food
+        if (recipe.Count >= minIngredients && foodList.transform.childCount < maxFood)
         {
-            //Creating the food and getting component
-            Food _food = Instantiate(foodPrefab, foodList.transform).GetComponent<Food>();
-
-            //Going through all ingredients
-            for (int i = 0; i < recipe.Count; i++)
-            {
-                //Sending recipe to the food
-                _food.ingredients.Add(recipe[i]);
-            }
-
-            //Clearing recipe
-            recipe.Clear();
-            slots.Clear();
-            panShow.HideIngredients();
+            animator.SetTrigger("Cook");
         }
+    }
+
+    public void MakeFood()
+    {
+        //Creating the food and getting component
+        Food _food = Instantiate(foodPrefab, foodList.transform).GetComponent<Food>();
+        foodList.GetComponent<FoodShelf>().Organize();
+
+        //Going through all ingredients
+        for (int i = 0; i < recipe.Count; i++)
+        {
+            //Sending recipe to the food
+            _food.ingredients.Add(recipe[i]);
+        }
+
+        //Clearing recipe
+        recipe.Clear();
+        slots.Clear();
+        panShow.HideIngredients();
     }
 
     public void ClearRecipe()

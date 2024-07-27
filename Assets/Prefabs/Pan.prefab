@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5120648895013132303}
   - component: {fileID: 1070260835817975841}
   - component: {fileID: 2570380587693115000}
+  - component: {fileID: 3456808377016905346}
   m_Layer: 0
   m_Name: Pan
   m_TagString: Pan
@@ -77,13 +78,13 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 159799542, guid: 544bf6962759d3841a0552147341a54e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -121,18 +122,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.064022094}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
-    newSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 0.2, y: 0.13015777}
   m_EdgeRadius: 0
 --- !u!50 &5120648895013132303
 Rigidbody2D:
@@ -180,6 +181,7 @@ MonoBehaviour:
   foodPrefab: {fileID: 6113910050000133096, guid: 97eb49f371fcffb489f3af87b131f93a,
     type: 3}
   foodList: {fileID: 0}
+  maxFood: 12
 --- !u!114 &2570380587693115000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +196,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredients: []
   ingredientPanel: {fileID: 2666687021258256695}
+--- !u!95 &3456808377016905346
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427628607989346014}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4de5048b12abf204eb4c828b760f78ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4405653987820082098
 GameObject:
   m_ObjectHideFlags: 0
