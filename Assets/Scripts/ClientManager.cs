@@ -43,5 +43,8 @@ public class ClientManager : Singleton<ClientManager>
     {
         RenderCharacter(characterQueue[0]);
         characterQueue.RemoveAt(0);
+        DialogueManager.Instance.WriteDialogue(activeCharacter.GetDialoguePrompt(DialogueSO.DialoguePrompt.FIRST_MEETING));
     }
+
+    
 }
