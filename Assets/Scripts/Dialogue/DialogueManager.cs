@@ -14,17 +14,21 @@ public class DialogueManager : Singleton<DialogueManager>
     public void WriteDialogue(DialogueSO dialogue)
     {
         queuedTexts.Clear();
+        Debug.Log("active true");
         dialogueBox.SetActive(true);
         for(int i = 0; i < dialogue.texts.Length; i++)
         {
             queuedTexts.Add(dialogue.texts[i]);
         }
-        NextText();
+        //NextText();
         currentDialogue = dialogue;
+        WriteDialogue(queuedTexts[0]);
+        queuedTexts.RemoveAt(0);
     }
 
     public void WriteDialogue(string text)
     {
+        Debug.Log("speaking: " +text);
         dialogueText.WriteText(text);
     }
 
@@ -47,6 +51,7 @@ public class DialogueManager : Singleton<DialogueManager>
             {
                 //fecha o dialogo e passa de personagem
                 currentDialogue = null;
+                
                 dialogueBox.SetActive(false);
                 ClientManager.Instance.NextCharacter();
             }else
@@ -55,11 +60,10 @@ public class DialogueManager : Singleton<DialogueManager>
                     currentDialogue.prompt == DialogueSO.DialoguePrompt.NEUTRAL_FEEDBACK)
             {
                 ClientManager.Instance.ExtraDialogue();
+            }else
+            {
+                dialogueBox.SetActive(false);
             }
-
-            
-            currentDialogue = null;
-            dialogueBox.SetActive(false);
             return;
         }
 

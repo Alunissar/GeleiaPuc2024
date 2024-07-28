@@ -37,7 +37,7 @@ public class Client : MonoBehaviour
             for (int j = 0; j < ingredients[i].tags.Length; j++)
             {
                 //Checking if food has already been counted
-                if(inFood.Contains(ingredients[i].tags[j]))
+                if(!inFood.Contains(ingredients[i].tags[j]))
                 {
                     //Checking if Client likes this ingredient
                     if (likes.Contains(ingredients[i].tags[j]))

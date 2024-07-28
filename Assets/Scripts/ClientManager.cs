@@ -42,7 +42,6 @@ public class ClientManager : Singleton<ClientManager>
     private void RenderCharacter(CharacterSO character)
     {
         activeCharacter = character;
-        Debug.Log(characterSpawnPoint.childCount);
         if(characterSpawnPoint.childCount > 0){Destroy(characterSpawnPoint.GetChild(0).gameObject);}
         Instantiate(activeCharacter.clientPrefab, characterSpawnPoint);
         DialogueManager.Instance.WriteName(character);
