@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a15b1009faf1045a32595ba1ddfb54, type: 3}
+  m_Name: RitaIntroFirstScriptable
+  m_EditorClassIdentifier: 
+  prompt: 0
+  texts:
+  - "Nooossaaa que legal o espa\xE7o que voc\xEAs tem aqui. A gente acaba esperando
+    pouco de caridade n\xE9, mas \xE9 t\xE3o aconchegante! "
+  - Ah, que grosseiria minha! Eu sou a Rita, prazer em conhecer!
+  - "Pode me dar uma marmita por favor? Faz tanto tempo que meu marido n\xE3o consegue
+    emprego, estou tendo que tomar muito cuidado com os gastos."

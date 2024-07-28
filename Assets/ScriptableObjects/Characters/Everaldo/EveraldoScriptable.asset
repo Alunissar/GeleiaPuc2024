@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96805931fc031d24fa104040a8259001, type: 3}
+  m_Name: EveraldoScriptable
+  m_EditorClassIdentifier: 
+  charName: Everaldo Nascimento
+  clientPrefab: {fileID: -1653095246958527357, guid: c2f844c8f5a119c4e97b5ea60dfd19a4,
+    type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: fc0f7c64a17b4e44683183917960e73b, type: 2}
+  - {fileID: 11400000, guid: cf51fbaa36c6c8e4fa5ac7a765ff06da, type: 2}
+  - {fileID: 11400000, guid: 2a1d54cf692b73948ae77a5c52b28dc7, type: 2}
+  - {fileID: 11400000, guid: e3bbd367e4b5cbb46aded487060d5235, type: 2}
+  - {fileID: 11400000, guid: 7b51f386ca4cdab46ae87d06ed9ca886, type: 2}
+  - {fileID: 11400000, guid: 5fd446ec342e4ae4aaad9cf9149c33b2, type: 2}
+  - {fileID: 11400000, guid: a0b4dbe2afb7f484cbca5fb910389229, type: 2}
+  - {fileID: 11400000, guid: 052fd97b7d0931748aba50e20767e084, type: 2}
+  _hasMet: 0
+  meetingTimes: 0

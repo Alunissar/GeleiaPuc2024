@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96805931fc031d24fa104040a8259001, type: 3}
+  m_Name: ManoelScriptable
+  m_EditorClassIdentifier: 
+  charName: Manoel Garcia
+  clientPrefab: {fileID: 7793132349955238665, guid: 3e0feb5504cfae843be68b1c7705c65e,
+    type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: 841b432d1bae1384383cf96af5c1334d, type: 2}
+  - {fileID: 11400000, guid: 9370e3a32a00ee14d8fe0d3fed01390c, type: 2}
+  - {fileID: 11400000, guid: cf6ebc567ec7a17479ed21229da69871, type: 2}
+  - {fileID: 11400000, guid: 1646e6c73f6fcc845a7d090abaa1f31c, type: 2}
+  - {fileID: 11400000, guid: 0cc73f88b58e6b6439ca8e24819d9903, type: 2}
+  - {fileID: 11400000, guid: 09744cd6d78b7ec4b8690eef5af301e0, type: 2}
+  - {fileID: 11400000, guid: 9f6727352ae554f4ea0af4d5b6d1d7a5, type: 2}
+  - {fileID: 11400000, guid: 43e184d164369164e8eace910c641274, type: 2}
+  _hasMet: 0
+  meetingTimes: 0
