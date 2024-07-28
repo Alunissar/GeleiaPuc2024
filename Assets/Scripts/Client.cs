@@ -13,28 +13,22 @@ public class Client : MonoBehaviour
     //Gets how much the client liked the food
     int taste = 0;
 
+    bool goingAway = false;
+    public bool eaten = false;
+
     private void Start()
     {
         inFood.Clear();
         taste = 0;
 
-        //Checking if there aren't enough ingredients
-        if(GameManager.Instance.ingredientsNumber <= 1)
-        {
-            //Trying to find a food
-            if(FindAnyObjectByType(typeof(Food)) == null)
-            {
-                //Going away
-                Invoke(nameof(GoAway), 1f);
-            }
-        }
+        InvokeRepeating(nameof(CheckLeftFood), 0f, 1f);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        CheckLeftFood();
     }
 
     public void GetFood(List<IngredientScriptable> ingredients)
@@ -72,6 +66,8 @@ public class Client : MonoBehaviour
             }
         }
 
+        eaten = true;
+
         GameManager.Instance.GetFeedback(taste);
 
         //Triggers dialogue according to taste
@@ -88,6 +84,24 @@ public class Client : MonoBehaviour
             SoundManager.instance.PlaySFX(SoundManager.instance.sounds[2]);
         }
 
+    }
+
+    private void CheckLeftFood()
+    {
+        if (!goingAway && !eaten)
+        {
+            //Checking if there aren't enough ingredients
+            if (GameManager.Instance.ingredientsNumber <= 1 && GameManager.Instance.currentDayState != GameManager.DayState.Shop)
+            {
+                //Trying to find a food
+                if (FindAnyObjectByType(typeof(Food)) == null)
+                {
+                    goingAway = true;
+                    //Going away
+                    Invoke(nameof(GoAway), 1f);
+                }
+            }
+        }
     }
 
     private void GoAway()

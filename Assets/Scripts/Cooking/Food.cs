@@ -65,16 +65,19 @@ public class Food : MonoBehaviour
             //Checking if released mouse
             if (!Input.GetMouseButton(0) && isFollowing)
             {
+                //Checking if client hasn't eaten yet
+                if (!collision.GetComponent<Client>().eaten)
+                {
+                    SoundManager.instance.PlayBite();
 
-                SoundManager.instance.PlayBite();
+                    //Passing ingredients
+                    collision.GetComponent<Client>().GetFood(ingredients);
 
-                //Passing ingredients
-                collision.GetComponent<Client>().GetFood(ingredients);
+                    holding = false;
 
-                holding = false;
-
-                //Destroying food
-                Destroy(gameObject);
+                    //Destroying food
+                    Destroy(gameObject);
+                }
             }
         }
     }
