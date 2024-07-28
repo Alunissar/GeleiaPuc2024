@@ -68,7 +68,7 @@ public class GameManager : Singleton<GameManager>
     public void StartGame()
     {
         dayCount = 0;
-        currency = 250;
+        currency = 150;
 
         //Getting how many ingredients you are starting with
         ingredientsNumber = 0;
@@ -102,10 +102,12 @@ public class GameManager : Singleton<GameManager>
 
         //Checks how much money have at the start of the day
         int _currency = currency;
+        //Checks how many rating have at the start of the day
+        int _bonus = feedback;
 
         dayCount++;
 
-        if (dayCount >= 24)
+        if (dayCount >= 7*3)
         {
             SceneManager.LoadScene(2);
         }
@@ -120,7 +122,7 @@ public class GameManager : Singleton<GameManager>
             if (clients > 0)
             {
                 //Checking if had bad review
-                if (feedback / clients < 0)
+                if (feedback < 0)
                 {
                     SceneManager.LoadScene(3);
                 }
@@ -151,9 +153,11 @@ public class GameManager : Singleton<GameManager>
         }
 
         //Checking how much money is different
-        _currency = currency - _currency;
+        _currency = Mathf.Abs(currency - _currency) * (int)Mathf.Sign((float)_currency);
+        //Checking how much feedback is different
+        _bonus = Mathf.Abs(feedback - _bonus) * (int)Mathf.Sign((float)_bonus);
 
-        UpdateShopText(ing, quantity, _currency);
+        UpdateShopText(ing, quantity, _currency, _bonus);
 
     }
 
@@ -163,7 +167,7 @@ public class GameManager : Singleton<GameManager>
         currency += UnityEngine.Random.Range(minCurrencyGain, maxCurrencyGain+1);
 
         //Adding or reducing Bonus
-        currency += Bonus * (feedback / clients);
+        currency += Bonus * feedback;
 
         UpdateCurrencyText();
 
@@ -194,7 +198,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    private void UpdateShopText(IngredientScriptable ing, int quantity, int _currency)
+    private void UpdateShopText(IngredientScriptable ing, int quantity, int _currency, int bonus)
     {
         summaryTitle.text = "Dia: " + dayCount + "\n";
 
@@ -205,7 +209,7 @@ public class GameManager : Singleton<GameManager>
         if (clients > 0)
         {
             //Reseting summary text
-            summaryText.text = "Reputacao gerada pelo Bandejao " + "(" + (feedback / clients) + ")" + "\n";
+            summaryText.text = "Reputacao gerada pelo Bandejao " + "(" + bonus + ")" + "\n";
         }
 
         //Checking if there were ingredient donations

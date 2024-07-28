@@ -15,6 +15,6 @@ MonoBehaviour:
   ingredientName: Laranja
   tags: 0c00000003000000
   icon: {fileID: 21300000, guid: 5e3ab3f189eaf1d4daf40d3463f4d02d, type: 3}
-  quantity: 0
-  price: 0
+  quantity: 3
+  price: 3
   durability: 0
