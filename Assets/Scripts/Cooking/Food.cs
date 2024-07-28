@@ -78,6 +78,14 @@ public class Food : MonoBehaviour
                     //Destroying food
                     Destroy(gameObject);
                 }
+                else
+                {
+                    holding = false;
+                    isFollowing = false;
+
+                    //Returning to last position
+                    transform.position = lastPosition;
+                }
             }
         }
     }
