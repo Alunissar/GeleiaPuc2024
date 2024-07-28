@@ -15,6 +15,6 @@ MonoBehaviour:
   ingredientName: Mandioca
   tags: 0d00000001000000
   icon: {fileID: 21300000, guid: a15b8b60877c4bb48a90814e556b6009, type: 3}
-  quantity: 5
+  quantity: 19
   price: 0
   durability: 0

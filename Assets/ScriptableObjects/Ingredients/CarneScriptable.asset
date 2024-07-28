@@ -15,6 +15,6 @@ MonoBehaviour:
   ingredientName: Carne
   tags: 0800000000000000
   icon: {fileID: 21300000, guid: 9d9f1e365821d0840b55ae54ea4040a0, type: 3}
-  quantity: 6
+  quantity: 22
   price: 0
   durability: 0

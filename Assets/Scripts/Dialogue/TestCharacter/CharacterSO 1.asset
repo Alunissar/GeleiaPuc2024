@@ -16,9 +16,13 @@ MonoBehaviour:
   clientPrefab: {fileID: 4030744950872795291, guid: 1f38f3037b7ddc04ea40ed1e8f8dae62,
     type: 3}
   dialogues:
+  - {fileID: 11400000, guid: cfa7582caa995b2409242775e5cd3cc5, type: 2}
+  - {fileID: 11400000, guid: 1bab13dee6ab8714ca208a40256807c5, type: 2}
+  - {fileID: 11400000, guid: 463567f030e23b742b904164a6a88383, type: 2}
   - {fileID: 11400000, guid: a50c1ee343ee51a418eb076c5a415a48, type: 2}
   - {fileID: 11400000, guid: 646175ff77b0cf34aacedb42fd166de1, type: 2}
   - {fileID: 11400000, guid: bfa85486aa675d74ea64aadf3355af0f, type: 2}
   - {fileID: 11400000, guid: df7917f123ebb864397fe9beec62695f, type: 2}
-  _hasMet: 0
-  meetingTimes: 0
+  - {fileID: 11400000, guid: 3f76f582ed3cc5f49841954affe95f15, type: 2}
+  _hasMet: 1
+  meetingTimes: 2
