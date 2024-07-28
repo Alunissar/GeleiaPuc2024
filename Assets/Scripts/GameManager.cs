@@ -76,13 +76,14 @@ public class GameManager : Singleton<GameManager>
         //Getting how many ingredients you are starting with
         ingredientsNumber = 0;
 
+        ResetSOs();
+        
         //Going through all ingredients
         for (int i = 0; i < ingredients.Count; i++)
         {
             //Adding to the count of ingredients
             ingredientsNumber += ingredients[i].quantity;
         }
-        ResetSOs();
     }
 
     private void ResetSOs()
