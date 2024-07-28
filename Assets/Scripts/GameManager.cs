@@ -220,4 +220,9 @@ public class GameManager : Singleton<GameManager>
         pauseMenu.SetActive(!pauseMenu.activeSelf);
     }
 
+    public void LoadScene(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
+
 }
