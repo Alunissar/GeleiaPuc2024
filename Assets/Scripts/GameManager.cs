@@ -51,9 +51,6 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] TextMeshProUGUI summaryTitle;
     [SerializeField] TextMeshProUGUI summaryText;
 
-    [Header("Scriptable Object Refs")]
-    [SerializeField] private CharacterSO[] characterSOs;
-
     private void Start()
     {
         StartGame();
@@ -88,7 +85,7 @@ public class GameManager : Singleton<GameManager>
 
     private void ResetSOs()
     {
-        foreach(CharacterSO character in characterSOs)
+        foreach(CharacterSO character in ClientManager.Instance.allCharacters)
         {
             character._hasMet = false;
             character.meetingTimes = 0;
