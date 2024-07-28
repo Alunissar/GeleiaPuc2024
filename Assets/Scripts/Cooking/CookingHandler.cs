@@ -39,7 +39,7 @@ public class CookingHandler : MonoBehaviour
     public void FinishRecipe()
     {
         //Checking if minimal ingredients are reached && there is space to store food
-        if (recipe.Count >= minIngredients && foodList.transform.childCount < maxFood)
+        if (recipe.Count >= minIngredients && foodList.transform.childCount < maxFood && animator.GetCurrentAnimatorStateInfo(0).IsName("PanelaIdle"))
         {
             SoundManager.instance.PlaySFX(SoundManager.instance.sounds[0]);
             animator.SetTrigger("Cook");

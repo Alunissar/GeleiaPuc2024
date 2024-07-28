@@ -102,8 +102,6 @@ public class GameManager : Singleton<GameManager>
 
         //Checks how much money have at the start of the day
         int _currency = currency;
-        //Checks how many rating have at the start of the day
-        int _bonus = feedback;
 
         dayCount++;
 
@@ -128,9 +126,7 @@ public class GameManager : Singleton<GameManager>
                 }
             }
 
-            //Reseting feedback values
-            clients = 0;
-            feedback = 0;
+            
         }
         //Getting a random chance for getting ingredient
         float _chance = UnityEngine.Random.Range(0f, 100f);
@@ -154,10 +150,15 @@ public class GameManager : Singleton<GameManager>
 
         //Checking how much money is different
         _currency = Mathf.Abs(currency - _currency) * (int)Mathf.Sign((float)_currency);
-        //Checking how much feedback is different
-        _bonus = Mathf.Abs(feedback - _bonus) * (int)Mathf.Sign((float)_bonus);
 
-        UpdateShopText(ing, quantity, _currency, _bonus);
+        UpdateShopText(ing, quantity, _currency);
+
+        if(dayCount % 7 == 0)
+        {
+            //Reseting feedback values
+            clients = 0;
+            feedback = 0;
+        }
 
     }
 
@@ -198,7 +199,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    private void UpdateShopText(IngredientScriptable ing, int quantity, int _currency, int bonus)
+    private void UpdateShopText(IngredientScriptable ing, int quantity, int _currency)
     {
         summaryTitle.text = "Dia: " + dayCount + "\n";
 
@@ -209,7 +210,7 @@ public class GameManager : Singleton<GameManager>
         if (clients > 0)
         {
             //Reseting summary text
-            summaryText.text = "Reputacao gerada pelo Bandejao " + "(" + bonus + ")" + "\n";
+            summaryText.text = "Reputacao gerada pelo Bandejao " + "(" + feedback + ")" + "\n";
         }
 
         //Checking if there were ingredient donations
