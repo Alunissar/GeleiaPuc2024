@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: -85944012725303300}
   - component: {fileID: 3052773101506350076}
   m_Layer: 0
-  m_Name: Character 16
+  m_Name: Carla
   m_TagString: Client
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,8 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e27048cd434fe439f7b307a4283d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  likes: 
-  dislikes: 
+  likes: 0c00000010000000
+  dislikes: 01000000
+  eaten: 0
 --- !u!50 &-85944012725303300
 Rigidbody2D:
   serializedVersion: 4
