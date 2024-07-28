@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prompt: 4
   texts:
-  - "Ah\u2026 \\nAh muito obrigada viu? Voc\xEAs s\xE3o uma b\xEAn\xE7\xE3o."
+  - "Ah\u2026"
+  - "Ah muito obrigada viu? Voc\xEAs s\xE3o uma b\xEAn\xE7\xE3o."
