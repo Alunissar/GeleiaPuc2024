@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96805931fc031d24fa104040a8259001, type: 3}
+  m_Name: CamilaScriptable
+  m_EditorClassIdentifier: 
+  charName: Camila Andrade
+  clientPrefab: {fileID: -6213448218563065536, guid: 384d5b568fb17584c9ee979e45bf090a,
+    type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: 32f79063a9685fb499997fe1200c799b, type: 2}
+  - {fileID: 11400000, guid: 2f6a6a405e39a204b8cf7716ed5566dc, type: 2}
+  - {fileID: 11400000, guid: 8c6b61a2bad55fb46bd03a96b6104e37, type: 2}
+  - {fileID: 11400000, guid: 189a9c5c42393f547b7127dc3a4e689a, type: 2}
+  - {fileID: 11400000, guid: 28f97ec6e82d27e43ba4258518d71a56, type: 2}
+  - {fileID: 11400000, guid: 8542565c983e0de4faa7c1b70d70baee, type: 2}
+  - {fileID: 11400000, guid: dd42a5c4545983041977f146d0bad991, type: 2}
+  - {fileID: 11400000, guid: c0f074c812b0e9c4691783755fff1171, type: 2}
+  _hasMet: 0
+  meetingTimes: 0
