@@ -207,18 +207,18 @@ public class GameManager : Singleton<GameManager>
         if (clients > 0)
         {
             //Reseting summary text
-            summaryText.text = "Reputa��o gerada pelo Bandej�o " + "(" + (feedback / clients) + ")" + "\n";
+            summaryText.text = "Reputacao gerada pelo Bandejao " + "(" + (feedback / clients) + ")" + "\n";
         }
 
         //Checking if there were ingredient donations
         if(quantity > 0)
         {
-            summaryText.text += "Doa��o de alimentos: " + ing.ingredientName + "(" + quantity +")" + "\n";
+            summaryText.text += "Doacao de alimentos: " + ing.ingredientName + "(" + quantity +")" + "\n";
         }
         //Checking if there were any money alterations
         if(_currency > 0)
         {
-            summaryText.text += "Doa��o em dinheiro: " + "$" + _currency;
+            summaryText.text += "Doacao em dinheiro: " + "$" + _currency;
         }
 
         UpdateCurrencyText();
