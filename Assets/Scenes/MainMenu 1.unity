@@ -923,10 +923,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 556028601}
     m_Modifications:
+    - target: {fileID: 561416944842142870, guid: cb65e9cb326057f429314e5c9aa164b0,
+        type: 3}
+      propertyPath: m_Name
+      value: Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 570725311661806247, guid: cb65e9cb326057f429314e5c9aa164b0,
+        type: 3}
+      propertyPath: m_Text
+      value: "Programa\xE7\xE3o - Arthur Motta e Luiz Andrade\nArte 2D - Gabriel
+        Meyer, Lucca Catalan e Luiz Andrade\nDesign de personagens - Arthur Motta
+        e Lucas Bento\nRoteiro - Arthur Motta e Lucas Bento\nUI - Gabriel Meyer\nGame
+        Design - Arthur Motta, Gabriel Meyer, Lucas Bento, Lucca Catalan e Luiz Andrade\nEfeitos
+        Sonoros e M\xFAsica - Dom\xEDnio p\xFAblico\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 1033038427574771669, guid: cb65e9cb326057f429314e5c9aa164b0,
         type: 3}
       propertyPath: m_Name
       value: CreditsCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972656498531558730, guid: cb65e9cb326057f429314e5c9aa164b0,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 524.4646
+      objectReference: {fileID: 0}
+    - target: {fileID: 4972656498531558730, guid: cb65e9cb326057f429314e5c9aa164b0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -89.530945
       objectReference: {fileID: 0}
     - target: {fileID: 6309079284047512531, guid: cb65e9cb326057f429314e5c9aa164b0,
         type: 3}
