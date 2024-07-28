@@ -52,6 +52,9 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] TextMeshProUGUI summaryTitle;
     [SerializeField] TextMeshProUGUI summaryText;
 
+    [Header("Scriptable Object Refs")]
+    [SerializeField] private CharacterSO[] characterSOs;
+
     private void Start()
     {
         StartGame();
@@ -80,7 +83,23 @@ public class GameManager : Singleton<GameManager>
             //Adding to the count of ingredients
             ingredientsNumber += ingredients[i].quantity;
         }
+        ResetSOs();
     }
+
+    private void ResetSOs()
+    {
+        foreach(CharacterSO character in characterSOs)
+        {
+            character._hasMet = false;
+            character.meetingTimes = 0;
+        }
+
+        foreach (IngredientScriptable ingredient in ingredients)
+        {
+            ingredient.quantity = 1;
+        }
+    }
+
     public void StartDay()
     {
 
@@ -189,18 +208,18 @@ public class GameManager : Singleton<GameManager>
         if (clients > 0)
         {
             //Reseting summary text
-            summaryText.text = "Reputação gerada pelo Bandejão " + "(" + (feedback / clients) + ")" + "\n";
+            summaryText.text = "Reputaï¿½ï¿½o gerada pelo Bandejï¿½o " + "(" + (feedback / clients) + ")" + "\n";
         }
 
         //Checking if there were ingredient donations
         if(quantity > 0)
         {
-            summaryText.text += "Doação de alimentos: " + ing.ingredientName + "(" + quantity +")" + "\n";
+            summaryText.text += "Doaï¿½ï¿½o de alimentos: " + ing.ingredientName + "(" + quantity +")" + "\n";
         }
         //Checking if there were any money alterations
         if(_currency > 0)
         {
-            summaryText.text += "Doação em dinheiro: " + "$" + _currency;
+            summaryText.text += "Doaï¿½ï¿½o em dinheiro: " + "$" + _currency;
         }
 
         UpdateCurrencyText();
