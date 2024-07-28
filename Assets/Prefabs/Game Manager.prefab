@@ -61,13 +61,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1c07a18aacce24d4f8120c58c4471bda, type: 2}
   - {fileID: 11400000, guid: 224a9942ad8e8a54e95a84cf96ab7bec, type: 2}
   - {fileID: 11400000, guid: 2f4206cb60fb3ca40b942152a9f85b98, type: 2}
-  minCurrencyGain: 180
-  maxCurrencyGain: 350
+  minCurrencyGain: 100
+  maxCurrencyGain: 100
   minIngredientGain: 2
-  maxIngredientGain: 6
+  maxIngredientGain: 4
+  ingredientsNumber: 0
   ingredientGainChance: 50
   dailyClients: 2
   currencyText: {fileID: 0}
-  Bonus: 20
+  Bonus: 3
+  pauseMenu: {fileID: 0}
   summaryTitle: {fileID: 0}
   summaryText: {fileID: 0}
