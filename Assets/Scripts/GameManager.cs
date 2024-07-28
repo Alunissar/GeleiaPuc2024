@@ -88,6 +88,10 @@ public class GameManager : Singleton<GameManager>
         if (dayCount % 7 == 0)
         {
             GetCurrency();
+
+            //Reseting feedback values
+            clients = 0;
+            feedback = 0;
         }
         //Getting a random chance for getting ingredient
         float _chance = UnityEngine.Random.Range(0f, 100f);
@@ -114,9 +118,6 @@ public class GameManager : Singleton<GameManager>
 
         UpdateShopText(ing, quantity, _currency);
 
-        //Reseting feedback values
-        clients = 0;
-        feedback = 0;
     }
 
     private void GetCurrency()
