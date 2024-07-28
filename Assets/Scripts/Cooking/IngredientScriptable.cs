@@ -21,7 +21,8 @@ public enum FoodType
     Mandioca,
     Ovo,
     Soja,
-    Tomate
+    Tomate,
+    Leguminosa,
 }
 
 [CreateAssetMenu(fileName = "Ingredient", menuName = "Ingredients", order = 1)]

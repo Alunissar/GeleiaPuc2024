@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SojaScriptable
   m_EditorClassIdentifier: 
   ingredientName: Soja
-  tags: 0f00000000000000
+  tags: 0f00000011000000
   icon: {fileID: 21300000, guid: 3adab627582c6b54994bcceba9354521, type: 3}
   quantity: 0
   price: 0
