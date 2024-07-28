@@ -28,6 +28,8 @@ public class CookingHandler : MonoBehaviour
 
     public void AddIngredient(IngredientScriptable newIngredient, int slot)
     {
+        SoundManager.instance.PlaySFX(SoundManager.instance.sounds[1]);
+
         //Adding ingredient to recipe
         recipe.Add(newIngredient);
         slots.Add(slot);
@@ -39,12 +41,14 @@ public class CookingHandler : MonoBehaviour
         //Checking if minimal ingredients are reached && there is space to store food
         if (recipe.Count >= minIngredients && foodList.transform.childCount < maxFood)
         {
+            SoundManager.instance.PlaySFX(SoundManager.instance.sounds[0]);
             animator.SetTrigger("Cook");
         }
     }
 
     public void MakeFood()
     {
+
         //Creating the food and getting component
         Food _food = Instantiate(foodPrefab, foodList.transform).GetComponent<Food>();
         foodList.GetComponent<FoodShelf>().Organize();

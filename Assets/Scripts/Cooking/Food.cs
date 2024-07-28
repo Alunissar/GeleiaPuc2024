@@ -62,6 +62,9 @@ public class Food : MonoBehaviour
             //Checking if released mouse
             if (!Input.GetMouseButton(0) && isFollowing)
             {
+
+                SoundManager.instance.PlayBite();
+
                 //Passing ingredients
                 collision.GetComponent<Client>().GetFood(ingredients);
 

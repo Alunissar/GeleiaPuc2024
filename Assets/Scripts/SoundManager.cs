@@ -6,7 +6,8 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] AudioSource bgm;
     [SerializeField] AudioSource sfx;
-    [SerializeField] AudioClip[] bites;
+    public AudioClip[] bites;
+    public AudioClip[] sounds;
 
     public static SoundManager instance;
     // Start is called before the first frame update
@@ -32,12 +33,10 @@ public class SoundManager : MonoBehaviour
     public void ChangeSFXVolume(float volume)
     {
         sfx.volume = volume;
-        Debug.Log(sfx.volume);
     }
     public void ChangeBGMVolume(float volume)
     {
         bgm.volume = volume;
-        Debug.Log(bgm.volume);
     }
 
     public void PlaySFX(AudioClip clip)

@@ -64,6 +64,18 @@ public class Client : MonoBehaviour
 
         //Triggers dialogue according to taste
         ClientManager.Instance.DeliveryDialogue(taste);
+
+        //Checking if it was good
+        if(taste > 0)
+        {
+            SoundManager.instance.PlaySFX(SoundManager.instance.sounds[3]);
+        }
+        //Checking if it was bad
+        else if(taste < 0)
+        {
+            SoundManager.instance.PlaySFX(SoundManager.instance.sounds[2]);
+        }
+
     }
 
     
