@@ -220,7 +220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   likes: 03000000
-  dislikes: 0c000000
+  dislikes: 11000000
+  eaten: 0
 --- !u!50 &-4474061066313349180
 Rigidbody2D:
   serializedVersion: 4

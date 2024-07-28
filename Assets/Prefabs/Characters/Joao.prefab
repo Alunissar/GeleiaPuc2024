@@ -49,8 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e27048cd434fe439f7b307a4283d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  likes: 
-  dislikes: 
+  likes: 07000000
+  dislikes: 08000000
+  eaten: 0
 --- !u!50 &2477349012685844300
 Rigidbody2D:
   serializedVersion: 4
