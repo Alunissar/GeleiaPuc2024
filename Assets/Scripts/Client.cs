@@ -59,6 +59,9 @@ public class Client : MonoBehaviour
                 }
             }
         }
+
+        GameManager.Instance.GetFeedback(taste);
+
         //Triggers dialogue according to taste
         ClientManager.Instance.DeliveryDialogue(taste);
     }
