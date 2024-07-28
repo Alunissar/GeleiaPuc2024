@@ -95,6 +95,11 @@ public class FoodShelf : MonoBehaviour
 
                 transform.position = posC;
                 break;
+
+            default:
+                //Gowing to the casa do carai
+                transform.position = new Vector3(-800, -1290, 0);
+                break;
         }
 
         Organize();
