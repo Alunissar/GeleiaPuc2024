@@ -67,7 +67,7 @@ MonoBehaviour:
   maxIngredientGain: 4
   ingredientsNumber: 0
   ingredientGainChance: 50
-  dailyClients: 2
+  dailyClients: 3
   currencyText: {fileID: 0}
   Bonus: 3
   pauseMenu: {fileID: 0}
