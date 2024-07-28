@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
@@ -37,6 +38,11 @@ public class GameManager : Singleton<GameManager>
 
     public Action<DayState> changeDayState;
 
+    [SerializeField] int Bonus;
+
+    private int feedback;
+    private int clients;
+
     private void Start()
     {
         StartGame();
@@ -51,6 +57,10 @@ public class GameManager : Singleton<GameManager>
     }
     public void StartDay()
     {
+        //Reseting feedback values
+        clients = 0;
+        feedback = 0;
+
         dayCount++;
         ClientManager.Instance.PopulateQueue(dailyClients);
         //Checking if it's the start of the week
@@ -79,6 +89,9 @@ public class GameManager : Singleton<GameManager>
         //Adding a random quantity of currency
         currency += UnityEngine.Random.Range(minCurrencyGain, maxCurrencyGain+1);
 
+        //Adding or reducing Bonus
+        currency += Bonus * (feedback / clients);
+
         UpdateCurrencyText();
 
     }
@@ -104,6 +117,13 @@ public class GameManager : Singleton<GameManager>
             //Updating currency text
             currencyText.text = "$" + currency;
         }
+    }
+
+    public void GetFeedback(int _feed)
+    {
+        //Adding to the feed
+        feedback += _feed;
+        clients++;
     }
 
 }

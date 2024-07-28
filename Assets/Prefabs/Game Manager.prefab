@@ -66,5 +66,6 @@ MonoBehaviour:
   minIngredientGain: 2
   maxIngredientGain: 6
   ingredientGainChance: 50
-  dailyClients: 2
+  dailyClients: 1
   currencyText: {fileID: 0}
+  Bonus: 20
