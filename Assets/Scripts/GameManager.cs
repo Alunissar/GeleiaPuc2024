@@ -31,6 +31,8 @@ public class GameManager : Singleton<GameManager>
     [Range(0, 100)]
     [SerializeField] float ingredientGainChance;
 
+    [SerializeField] private int dailyClients;
+
     [SerializeField] TextMeshProUGUI currencyText;
 
     public Action<DayState> changeDayState;
@@ -50,7 +52,7 @@ public class GameManager : Singleton<GameManager>
     public void StartDay()
     {
         dayCount++;
-        ClientManager.Instance.PopulateQueue(1);
+        ClientManager.Instance.PopulateQueue(dailyClients);
         //Checking if it's the start of the week
         if (dayCount % 7 == 0)
         {

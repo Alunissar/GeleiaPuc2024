@@ -47,6 +47,7 @@ MonoBehaviour:
   currentDayState: 0
   dayCount: 0
   currency: 0
+  inventoryShop: {fileID: 0}
   ingredients:
   - {fileID: 11400000, guid: f5c4b3f3733b60442a978159172718bf, type: 2}
   - {fileID: 11400000, guid: 6827111d64eb2684ea551fc3e16b44cf, type: 2}
@@ -65,4 +66,5 @@ MonoBehaviour:
   minIngredientGain: 2
   maxIngredientGain: 6
   ingredientGainChance: 50
+  dailyClients: 2
   currencyText: {fileID: 0}

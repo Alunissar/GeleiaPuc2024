@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AlfaceScriptable
   m_EditorClassIdentifier: 
   ingredientName: Alface
-  tags: 0600000004000000
+  tags: 0500000004000000
   icon: {fileID: 21300000, guid: 26a49116fc813d741b6b31abef4c770f, type: 3}
   quantity: 12
   price: 0

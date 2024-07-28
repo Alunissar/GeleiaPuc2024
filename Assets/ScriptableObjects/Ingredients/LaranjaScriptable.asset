@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LaranjaScriptable
   m_EditorClassIdentifier: 
   ingredientName: Laranja
-  tags: 0d00000003000000
+  tags: 0c00000003000000
   icon: {fileID: 21300000, guid: 5e3ab3f189eaf1d4daf40d3463f4d02d, type: 3}
   quantity: 3
   price: 0

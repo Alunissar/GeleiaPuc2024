@@ -10,7 +10,6 @@ public enum FoodType
     Grao,
     Fruta,
     Verdura,
-    Leguminosa,
     Alface,
     Arroz,
     Batata,
