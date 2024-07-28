@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96805931fc031d24fa104040a8259001, type: 3}
+  m_Name: LuanaScriptable
+  m_EditorClassIdentifier: 
+  charName: Luana da Silva
+  clientPrefab: {fileID: 1800463795254919786, guid: 5abde8145b1956c448fae945ee2a0c5f,
+    type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: b6b2ac786ae8972489651c8303186947, type: 2}
+  - {fileID: 11400000, guid: 8d512e20f8c179b4d946b649fd7496f8, type: 2}
+  - {fileID: 11400000, guid: 7f1a2b1becd211f4384ffd6c73a16baf, type: 2}
+  - {fileID: 11400000, guid: c91d7ea5bb12ee347bf6f3169073d8de, type: 2}
+  - {fileID: 11400000, guid: 8e809878383299f4b9a4cc04b7e44de1, type: 2}
+  - {fileID: 11400000, guid: 9e1fa86c47e653f47923fab19596d54d, type: 2}
+  - {fileID: 11400000, guid: f1a762ab67143cc4bb84e3b3f8a9a597, type: 2}
+  - {fileID: 11400000, guid: 80deca95253299a46b48fef6b6d8000a, type: 2}
+  _hasMet: 0
+  meetingTimes: 0

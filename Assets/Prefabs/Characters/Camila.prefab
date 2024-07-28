@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -642087136157399183}
   - component: {fileID: -9220457360644007904}
   m_Layer: 0
-  m_Name: Character 7
+  m_Name: Camila
   m_TagString: Client
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   likes: 
   dislikes: 
+  eaten: 0
 --- !u!50 &-642087136157399183
 Rigidbody2D:
   serializedVersion: 4
