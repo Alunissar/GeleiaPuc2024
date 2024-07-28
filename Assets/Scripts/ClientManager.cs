@@ -30,6 +30,7 @@ public class ClientManager : Singleton<ClientManager>
             int random = UnityEngine.Random.Range(0,unQueuedChars.Count);
             characterQueue.Add(unQueuedChars[random]);
             unQueuedChars.RemoveAt(random);
+            Debug.Log(characterQueue.Count);
         }
 
         //renders character and removes from character queue
@@ -42,7 +43,7 @@ public class ClientManager : Singleton<ClientManager>
     {
         activeCharacter = character;
         
-        try{Destroy(characterSpawnPoint.GetChild(0));}
+        try{Destroy(characterSpawnPoint.GetChild(0).gameObject);}
         catch{}
         Instantiate(activeCharacter.clientPrefab, characterSpawnPoint);
         DialogueManager.Instance.WriteName(character);

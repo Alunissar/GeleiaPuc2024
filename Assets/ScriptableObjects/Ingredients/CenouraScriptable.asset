@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CenouraScriptable
   m_EditorClassIdentifier: 
   ingredientName: Cenoura
-  tags: 0900000001000000
+  tags: 0a00000001000000
   icon: {fileID: 21300000, guid: 9881b13b1a93d43408b800164edd31da, type: 3}
   quantity: 13
   price: 0
