@@ -724,11 +724,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allCharacters:
+  - {fileID: 11400000, guid: a40fcbe075e85094fbb4701cb7fdad2e, type: 2}
+  - {fileID: 11400000, guid: ba5eb5a4da3cdf14f8224c6bfb46635c, type: 2}
   - {fileID: 11400000, guid: c45cad7ace6a8c24c8ebd9c4196b632b, type: 2}
   - {fileID: 11400000, guid: 54354c3050b82944c900159a3c089020, type: 2}
   - {fileID: 11400000, guid: e8c4bfcb1b71bd443b70b0dceab258e4, type: 2}
   - {fileID: 11400000, guid: cb356badc8f8e0c4aa67f6d39320ffe6, type: 2}
   - {fileID: 11400000, guid: 7935c7bd512458045a0fdf79c7bd24f7, type: 2}
+  - {fileID: 11400000, guid: 2a5f30ddafa15004eb085345b7a0099f, type: 2}
   - {fileID: 11400000, guid: 35869cef03cdb264696c44f16677519b, type: 2}
   - {fileID: 11400000, guid: a7d48325778b8df4dabfe0bfa5653775, type: 2}
   - {fileID: 11400000, guid: 1f0a0d69a0c452a4883bc2e9238380d6, type: 2}
