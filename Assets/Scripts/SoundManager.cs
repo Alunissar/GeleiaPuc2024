@@ -6,6 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] AudioSource bgm;
     [SerializeField] AudioSource sfx;
+    [SerializeField] AudioClip[] bites;
 
     public static SoundManager instance;
     // Start is called before the first frame update
@@ -49,5 +50,10 @@ public class SoundManager : MonoBehaviour
         bgm.clip = clip;
         bgm.Play();
         bgm.loop = true;
+    }
+
+    public void PlayBite()
+    {
+        sfx.PlayOneShot(bites[Random.Range(0, bites.Length)]);
     }
 }
