@@ -15,6 +15,6 @@ MonoBehaviour:
   ingredientName: Ovo
   tags: 0e00000000000000
   icon: {fileID: 21300000, guid: a339a71baf6733e4584e90953200c523, type: 3}
-  quantity: 20
+  quantity: 0
   price: 0
   durability: 0

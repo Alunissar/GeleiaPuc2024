@@ -17,6 +17,18 @@ public class Client : MonoBehaviour
     {
         inFood.Clear();
         taste = 0;
+
+        //Checking if there aren't enough ingredients
+        if(GameManager.Instance.ingredientsNumber <= 1)
+        {
+            //Trying to find a food
+            if(FindAnyObjectByType(typeof(Food)) == null)
+            {
+                //Going away
+                Invoke(nameof(GoAway), 1f);
+            }
+        }
+
     }
 
     // Update is called once per frame
@@ -78,6 +90,15 @@ public class Client : MonoBehaviour
 
     }
 
-    
+    private void GoAway()
+    {
+        //Playing bad feedback sound
+        SoundManager.instance.PlaySFX(SoundManager.instance.sounds[2]);
+        //Calling next character
+        ClientManager.Instance.NextCharacter();
+
+        //Passing negative feedback
+        GameManager.Instance.GetFeedback(-3);
+    }
 
 }

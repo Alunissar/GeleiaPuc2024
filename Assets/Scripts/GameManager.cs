@@ -30,6 +30,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] int minIngredientGain;
     [SerializeField] int maxIngredientGain;
 
+    public int ingredientsNumber = 0;
+
     [Range(0, 100)]
     [SerializeField] float ingredientGainChance;
 
@@ -68,6 +70,16 @@ public class GameManager : Singleton<GameManager>
     {
         dayCount = 0;
         currency = 250;
+
+        //Getting how many ingredients you are starting with
+        ingredientsNumber = 0;
+
+        //Going through all ingredients
+        for (int i = 0; i < ingredients.Count; i++)
+        {
+            //Adding to the count of ingredients
+            ingredientsNumber += ingredients[i].quantity;
+        }
     }
     public void StartDay()
     {
@@ -88,6 +100,15 @@ public class GameManager : Singleton<GameManager>
         if (dayCount % 7 == 0)
         {
             GetCurrency();
+
+            if (clients > 0)
+            {
+                //Checking if had bad review
+                if (feedback / clients < 0)
+                {
+                    SceneManager.LoadScene(3);
+                }
+            }
 
             //Reseting feedback values
             clients = 0;
@@ -138,6 +159,8 @@ public class GameManager : Singleton<GameManager>
         //Adding ingredients
         ing.quantity += quantity;
 
+        ingredientsNumber += quantity;
+
         Inventory.Instance.UpdateTexts();
 
         inventoryShop.UpdateText();
@@ -159,17 +182,20 @@ public class GameManager : Singleton<GameManager>
     {
         summaryTitle.text = "Dia: " + dayCount + "\n";
 
+        //Clearing text
+        summaryText.text = "";
+
         //Checking if had clients
         if (clients > 0)
         {
             //Reseting summary text
-            summaryText.text = "Reputação gerada pelo Bandejão " + "(" + (feedback / clients) + ")";
+            summaryText.text = "Reputação gerada pelo Bandejão " + "(" + (feedback / clients) + ")" + "\n";
         }
 
         //Checking if there were ingredient donations
         if(quantity > 0)
         {
-            summaryText.text += "Doação de alimentos: " + ing.ingredientName + "(" + quantity +")";
+            summaryText.text += "Doação de alimentos: " + ing.ingredientName + "(" + quantity +")" + "\n";
         }
         //Checking if there were any money alterations
         if(_currency > 0)

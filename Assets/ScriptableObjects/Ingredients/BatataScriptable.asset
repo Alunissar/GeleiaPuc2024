@@ -15,6 +15,6 @@ MonoBehaviour:
   ingredientName: Batata
   tags: 0700000001000000
   icon: {fileID: 21300000, guid: fe334da3a2472c845989c2baa5a285fc, type: 3}
-  quantity: 22
+  quantity: 0
   price: 0
   durability: 0

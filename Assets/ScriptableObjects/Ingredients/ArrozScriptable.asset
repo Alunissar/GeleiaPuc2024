@@ -15,6 +15,6 @@ MonoBehaviour:
   ingredientName: Arroz
   tags: 0600000002000000
   icon: {fileID: 21300000, guid: 08215d5b1e8aa9e46a7a7f8d79ad5e54, type: 3}
-  quantity: 25
+  quantity: 3
   price: 0
   durability: 0
