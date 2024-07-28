@@ -42,7 +42,7 @@ public class Inventory : Singleton<Inventory>
         }
     }
 
-    void OrganizeInventory()
+    public void OrganizeInventory()
     { 
         //Running through all the ingredients
        for(int i = 0; i < allIngredients.Count; i++)

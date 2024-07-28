@@ -81,6 +81,7 @@ public class GameManager : Singleton<GameManager>
             //Adding to the count of ingredients
             ingredientsNumber += ingredients[i].quantity;
         }
+        Inventory.Instance.OrganizeInventory();
     }
 
     private void ResetSOs()
