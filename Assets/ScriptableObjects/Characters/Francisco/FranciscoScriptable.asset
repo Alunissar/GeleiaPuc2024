@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96805931fc031d24fa104040a8259001, type: 3}
+  m_Name: FranciscoScriptable
+  m_EditorClassIdentifier: 
+  charName: Francisco de Souza
+  clientPrefab: {fileID: 5655054180737262154, guid: 03776a49cc47ec14fb72875c79d94967,
+    type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: 9559061e259877f4faa9b06960b798f2, type: 2}
+  - {fileID: 11400000, guid: 6683d97bc9f80c641a82fbe2cac2f123, type: 2}
+  - {fileID: 11400000, guid: 8877eac964315a84fa5d2a54d86decf8, type: 2}
+  - {fileID: 11400000, guid: 20c5122bdc2826e489d48a4c2d2feb06, type: 2}
+  - {fileID: 11400000, guid: 101aa8ab18dc04647b905c65ad917e24, type: 2}
+  - {fileID: 11400000, guid: f712c5db17009b24f8bbf75056e91de7, type: 2}
+  - {fileID: 11400000, guid: 8a00e803fdf0270408c4b220ecf3117d, type: 2}
+  - {fileID: 11400000, guid: a5c2d62698d3fa64e9c9da62567cac2b, type: 2}
+  _hasMet: 0
+  meetingTimes: 0

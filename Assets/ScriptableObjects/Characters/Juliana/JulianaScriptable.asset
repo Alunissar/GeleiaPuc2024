@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96805931fc031d24fa104040a8259001, type: 3}
+  m_Name: JulianaScriptable
+  m_EditorClassIdentifier: 
+  charName: Juliana Fagundes
+  clientPrefab: {fileID: -3384787818991915671, guid: 5439bb87599cb484d90853bde0e3cedd,
+    type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: 9b87df16af5d8924ebcc0529dbdb1139, type: 2}
+  - {fileID: 11400000, guid: ce9576bcdbf61624a87cb33918136751, type: 2}
+  - {fileID: 11400000, guid: 901488e01dffbe74ca38a227d9dff7c3, type: 2}
+  - {fileID: 11400000, guid: e1888c548828aaa4bb7779ee358d236d, type: 2}
+  - {fileID: 11400000, guid: a2aa73ad64865f749aa35516608527b6, type: 2}
+  - {fileID: 11400000, guid: e9d48874fd0a5784db3e95691d62909f, type: 2}
+  - {fileID: 11400000, guid: 376f16977b2e6384581ec9156c0190c0, type: 2}
+  - {fileID: 11400000, guid: 0231bec0e38323b4c82b11ad5db1b6ac, type: 2}
+  _hasMet: 0
+  meetingTimes: 0

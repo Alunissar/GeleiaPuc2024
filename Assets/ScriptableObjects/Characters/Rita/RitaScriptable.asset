@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96805931fc031d24fa104040a8259001, type: 3}
+  m_Name: RitaScriptable
+  m_EditorClassIdentifier: 
+  charName: Rita Garcia
+  clientPrefab: {fileID: 8535937465966749664, guid: 305dfee385ea65445a4fd07d22e61c88,
+    type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: a04f45314dee63c48a2900f4a81258a3, type: 2}
+  - {fileID: 11400000, guid: a5a0362dc89b3cc4293c69203e0442b0, type: 2}
+  - {fileID: 11400000, guid: b78c1f18f515d7b4e896f3d73029d997, type: 2}
+  - {fileID: 11400000, guid: b4a31577acb535a46837968e2835fa52, type: 2}
+  - {fileID: 11400000, guid: f44d2767415e86949a6be2f185127524, type: 2}
+  - {fileID: 11400000, guid: b60b5107e6b510f4684bc40e87d9f2c0, type: 2}
+  - {fileID: 11400000, guid: b42ea3cd88821e045906b81202671797, type: 2}
+  - {fileID: 11400000, guid: a5e3c4f96c9bd4845ab0bb1ec412da79, type: 2}
+  _hasMet: 0
+  meetingTimes: 0

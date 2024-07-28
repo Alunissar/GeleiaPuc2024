@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96805931fc031d24fa104040a8259001, type: 3}
+  m_Name: ElianaScriptable
+  m_EditorClassIdentifier: 
+  charName: Eliana Menezes
+  clientPrefab: {fileID: 4281620374140509077, guid: 14d5e4f4769be824c87fbde23d7fbb73,
+    type: 3}
+  dialogues:
+  - {fileID: 11400000, guid: 8a86920799ab32642b11fa490101a89c, type: 2}
+  - {fileID: 11400000, guid: 67d8e7385bc24364b9acc552169ee717, type: 2}
+  - {fileID: 11400000, guid: e7384db349b7bcb49b18dc00c66559c4, type: 2}
+  - {fileID: 11400000, guid: 8d002ff699eead240a1870a78b3573bc, type: 2}
+  - {fileID: 11400000, guid: 04b0122088f6aca49a4ee59e140be42c, type: 2}
+  - {fileID: 11400000, guid: 5dae2e208eaf300479579d626beed3c1, type: 2}
+  - {fileID: 11400000, guid: 048b80f847b8fb34bac777c5d1609004, type: 2}
+  - {fileID: 11400000, guid: 123d9ba4b68187640924338169671c42, type: 2}
+  _hasMet: 0
+  meetingTimes: 0
