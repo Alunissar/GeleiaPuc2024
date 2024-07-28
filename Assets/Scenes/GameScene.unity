@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 179851085}
   - component: {fileID: 179851087}
   - component: {fileID: 179851086}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Summary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,7 +565,7 @@ GameObject:
   - component: {fileID: 371207832}
   - component: {fileID: 371207834}
   - component: {fileID: 371207833}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1113,7 +1113,7 @@ GameObject:
   - component: {fileID: 652760216}
   - component: {fileID: 652760218}
   - component: {fileID: 652760217}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Currency
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1842,7 +1842,7 @@ PrefabInstance:
     - target: {fileID: 8582900831116529558, guid: d419b4e5171286742bd992f979d049c9,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 54.61
+      value: 46.26
       objectReference: {fileID: 0}
     - target: {fileID: 8582900831116529558, guid: d419b4e5171286742bd992f979d049c9,
         type: 3}
@@ -1852,12 +1852,12 @@ PrefabInstance:
     - target: {fileID: 8582900831116529558, guid: d419b4e5171286742bd992f979d049c9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 27.305
+      value: 23.13
       objectReference: {fileID: 0}
     - target: {fileID: 8582900831116529558, guid: d419b4e5171286742bd992f979d049c9,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.345
+      value: -4.785
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
