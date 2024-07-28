@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -43,26 +44,46 @@ public class GameManager : Singleton<GameManager>
     private int feedback;
     private int clients;
 
+    [SerializeField] GameObject pauseMenu;
+
+    [Header("Summary")]
+    [SerializeField] TextMeshProUGUI summaryTitle;
+    [SerializeField] TextMeshProUGUI summaryText;
+
     private void Start()
     {
         StartGame();
         StartDay();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
+    }
+
     public void StartGame()
     {
-        //GameObject.FindFirstObjectByType<ScreenSwap>().SwapScreen((int)currentDayState);
         dayCount = 0;
         currency = 250;
     }
     public void StartDay()
     {
-        //Reseting feedback values
-        clients = 0;
-        feedback = 0;
+
+        //Checks how much money have at the start of the day
+        int _currency = currency;
 
         dayCount++;
+
+        if (dayCount >= 24)
+        {
+            SceneManager.LoadScene(2);
+        }
+
         ClientManager.Instance.PopulateQueue(dailyClients);
+
         //Checking if it's the start of the week
         if (dayCount % 7 == 0)
         {
@@ -70,18 +91,32 @@ public class GameManager : Singleton<GameManager>
         }
         //Getting a random chance for getting ingredient
         float _chance = UnityEngine.Random.Range(0f, 100f);
-        //Checking chance
-        if(_chance <= ingredientGainChance)
-        {
-            //Getting an random index
-            int ind = UnityEngine.Random.Range(0, ingredients.Count);
-            //Getting the ingredient
-            IngredientScriptable ing = ingredients[ind];
-            //Getting a random number of ingredients to get
-            int quantity = UnityEngine.Random.Range(minIngredientGain, maxIngredientGain + 1);
 
+        //Getting an random index
+        int ind = UnityEngine.Random.Range(0, ingredients.Count);
+        //Getting the ingredient
+        IngredientScriptable ing = ingredients[ind];
+        //Getting a random number of ingredients to get
+        int quantity = UnityEngine.Random.Range(minIngredientGain, maxIngredientGain + 1);
+
+        //Checking chance
+        if (_chance <= ingredientGainChance)
+        {
             GetIngredients(ing, quantity);
         }
+        else
+        {
+            quantity = 0;
+        }
+
+        //Checking how much money is different
+        _currency = currency - _currency;
+
+        UpdateShopText(ing, quantity, _currency);
+
+        //Reseting feedback values
+        clients = 0;
+        feedback = 0;
     }
 
     private void GetCurrency()
@@ -119,11 +154,43 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    private void UpdateShopText(IngredientScriptable ing, int quantity, int _currency)
+    {
+        summaryTitle.text = "Dia: " + dayCount + "\n";
+
+        //Checking if had clients
+        if (clients > 0)
+        {
+            //Reseting summary text
+            summaryText.text = "Reputação gerada pelo Bandejão " + "(" + (feedback / clients) + ")";
+        }
+
+        //Checking if there were ingredient donations
+        if(quantity > 0)
+        {
+            summaryText.text += "Doação de alimentos: " + ing.ingredientName + "(" + quantity +")";
+        }
+        //Checking if there were any money alterations
+        if(_currency > 0)
+        {
+            summaryText.text += "Doação em dinheiro: " + "$" + _currency;
+        }
+
+        UpdateCurrencyText();
+
+    }
+
     public void GetFeedback(int _feed)
     {
         //Adding to the feed
         feedback += _feed;
         clients++;
+    }
+
+    public void PauseGame()
+    {
+        //Enabling and disabling pause
+        pauseMenu.SetActive(!pauseMenu.activeSelf);
     }
 
 }
