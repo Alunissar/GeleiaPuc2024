@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96805931fc031d24fa104040a8259001, type: 3}
   m_Name: JoaoScriptable
   m_EditorClassIdentifier: 
-  charName: "Jo\xE3o Augustp"
+  charName: "Jo\xE3o Augusto"
   clientPrefab: {fileID: 5529606093834089259, guid: 3e322c93879bc4f409c19a4bb7fbdff2,
     type: 3}
   dialogues:
